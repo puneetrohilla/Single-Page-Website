@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Single Page website</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" 
+rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            
+
+        }
+
+        header {
+            height: 100vh;
+            width: 100vw;
+            background-color: #21D4FD;
+            background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+            position: relative;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 15vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            position: absolute;
+
+        }
+
+        .navbar ul li {
+            display: inline-block;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            text-transform: capitalize;
+            padding: 0px 15px;
+            font-family: 'Roboto Slab', serif;
+
+        }
+
+        #logo a {
+            text-decoration: none;
+            color: white;
+            font-family: 'Roboto Slab', serif;
+
+        }
+        #logo a:hover {
+           
+           background-color: gray;
+           color: yellow;
+        }
+
+       .active, .menu ul li:hover{
+            border-top: 2px solid #5dade2;
+            border-bottom: 2px solid #5dade2;
+
+
+        }
+
+        .contact-btn a {
+            color: white;
+            text-decoration: none;
+            background-color: #d465ef;
+            padding: 10px 15px;
+            border-radius: 25px;
+            text-transform: capitalize;
+            border: 1px solid transparent;
+            font-family: 'Roboto Slab', serif;
+
+        }
+
+        .contact-btn a:hover {
+            background: linear-gradient(to bottom, #615cfd 0%, #d465ef 100%);
+        }
+        .center-content{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-transform: capitalize;
+            text-align: center;
+            z-index: 2;
+        }
+        .center-content h1{
+ font-weight: 700;
+ font-size: 70px;
+ /* color: white; */
+ margin-bottom: 10px;
+/* z-index: 1; */
+font-family: 'Bree Serif', serif;
+        }
+        .center-content h2{
+color: black;
+font-size: 25px;
+font-weight: 400px;
+/* z-index: 1; */
+font-family: 'Bree Serif', serif;
+        }
+        .center-content::before{
+            content: "";
+            border: 2px solid black;
+            position: absolute;
+            width: 148px;
+            height: auto;
+            left: 35px;
+            bottom: 0px;
+            margin-bottom: 10px;
+        }
+        header::before{
+            content: "";
+            position: absolute;
+            left: 10px;
+            top: 30vh;
+            bottom: 100px;
+            background: url("contact.jpg") no-repeat center center/cover;
+            border-radius: 30%;
+            height: 70%;
+            width: 40%;
+            z-index: 1;
+            opacity: 0.4;
+        }
+        .social-network{
+            position: absolute;
+            right: 5%;
+            top: 40%;
+
+            width: 40px;
+            height: auto;
+            /* margin-bottom: 10px; */
+            
+        }
+        .social-network div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: white; */
+            /* background-clip: content-box; */
+            border-radius: 50%;
+            margin-bottom: 20px;
+            height: 40px;
+            /* border-right:40% ; */
+width: 40px;
+/* background: linear-gradient(to bottom, #615cfd 0%, #d465ef 100%);; */
+            background-color: white;
+        }
+        .social-network div:hover{
+        
+background: linear-gradient(to bottom, #615cfd 0%, #d465ef 100%);;
+        }
+.grid-image{
+    left: 55%;
+    position: absolute;
+    opacity: 0.2;
+    bottom:0;
+    overflow: hidden;
+    background: url("grid.png") no-repeat center center/cover;
+width: 30%;
+height: 30%;
+}
+
+/* responsie */
+@media screen and (max-width:1118px) {
+    .navbar {
+            width: 100%;
+            height: 25vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            text-transform: capitalize;
+            padding: 0px 5px;
+            font-family: 'Roboto Slab', serif;
+
+        }
+        .navbar ul li {
+            display: inline-block;
+            margin-bottom: 20px;
+            margin-top: 12px;
+            /* margin-top: 30px; */
+        }
+        .contact-btn a {
+            color: white;
+            text-decoration: none;
+            background-color: #d465ef;
+            padding: 6px;
+            
+            text-transform: capitalize;
+            border: 1px solid transparent;
+            font-family: 'Roboto Slab', serif;
+
+        }
+        .center-content h1{
+ /* font-weight: 700; */
+ font-size: 2rem;
+ /* color: white; */
+ margin-bottom: 10px;
+/* z-index: 1; */
+font-family: 'Bree Serif', serif;
+        }
+        .center-content h2{
+color: black;
+font-size: 1.5rem;
+font-weight: 400px;
+/* z-index: 1; */
+font-family: 'Bree Serif', serif;
+        }
+        .center-content::before{
+            content: "";
+            border: 2px solid black;
+            position: absolute;
+            width: 148px;
+            height: auto;
+            display: none;
+            left: 35px;
+            bottom: 0px;
+            margin-bottom: 10px;
+        }
+        header::before{
+            content: "";
+            position: absolute;
+            left: 10px;
+            top: 30vh;
+            overflow: hidden;
+            background: url("contact.jpg") no-repeat center center/cover;
+            border-radius: 30%;
+            object-fit: cover;
+            height: 70%;
+            width: 70%;
+            z-index: 1;
+            opacity: 0.4;
+        }
+        .grid-image{
+    left: 55%;
+    position: absolute;
+    opacity: 0.2;
+    bottom:0;
+    overflow: hidden;
+    background: url("grid.png") no-repeat center center/cover;
+    display: none;
+width: 30%;
+height: 30%;
+}
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div id="logo">
+                <a href="#">
+                    <h1> PUNEET ROHILLA</h1>
+                </a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#" class="active">home</a></li>
+                    <li><a href="#">gallery</a></li>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">contact us</a></li>
+                    <li><a href="#">sign up</a></li>
+                </ul>
+            </div>
+            <!-- <button class="contact-btn">Contact Me</button> -->
+            <div class="contact-btn"><a href="#">Contact Me</a></div>
+        </nav>
+        <div class="center-content">
+        <h1>
+            Hello This Is Puneet
+             
+        </h1>
+        <h2>A BCA Graduate</h2>
+    </div>
+    <div class="social-network">
+        <div class="icons">
+           <a href="#"> <i class="fab fa-instagram"></i></a>
+        </div>
+        
+        <div class="icons">
+           <a href="#"> <i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+        <div class="icons">
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+
+    </div>
+    <div class="grid-image"> 
+<!-- <img src="grid.png" alt="grid image"> -->
+    </div>
+    </header>
+</body>
+
+</html>
